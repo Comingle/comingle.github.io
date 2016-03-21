@@ -1,0 +1,209 @@
+/*
+Theme Name: wp-bootstrap
+Theme URI: http://320press.com/wpbs
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 3.0
+Author: 320press
+Author URI: http://320press.com
+Tags: black, white, one-column, two-columns, flexible-width, custom-background, custom-colors, custom-menu, full-width-template, theme-options
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/* HEADS UP: Everything that you will normally find here can be found in the library/less/wp.less */
+
+/*
+    FLUIDITY v0.1.0 @mrmrs - http://mrmrs.cc MIT
+*/
+
+/* Responsive Utilities */
+img, canvas, iframe, video, svg { max-width: 100%; }
+
+/* Wrap tables or pre elements in a div with this class */
+.overflow-container { overflow-y: scroll; }
+
+/* Aspect ratios for media objects i.e canvas, iframe, video, svg etc. Defaults to 16x9 */
+.aspect-ratio { height: 0; padding-top: 56.25%; position: relative; }
+.aspect-ratio--object { bottom: 0; height: 100%; left: 0; position: absolute; right: 0; top: 0; width: 100%; z-index: 100; }
+
+.headshot div img {
+  border-radius: 4px;
+  padding: 2px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headshot div p {
+  text-align: justify;
+}
+
+.headshot div:nth-of-type(even) img {
+  border: 2px solid #25aae1;
+}
+
+.headshot div:nth-of-type(odd) img {
+  border: 2px solid #ed2790;
+}
+
+
+
+/* End Fluidity */
+
+h1, h2 {
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+#article-title {
+  text-transform: capitalize;
+}
+
+li.current-cat {
+  font-weight: 900;
+}
+
+li.current-cat ul {
+  font-weight: 400;
+}
+
+/* li:not(.current-cat):not(.current-cat-parent) ul.children {
+  display:none;
+} */
+
+#side-nav .nav>.active>a, #side-nav .nav>.active:hover>a, #side-nav .nav>.active:focus>a {
+  padding-left: 18px;
+  font-weight: 700;
+  color: #eb008b;
+  background-color: transparent;
+  border-left: 2px solid #eb008b;
+}
+
+#side-nav .nav .nav>.active>a, #side-nav .nav .nav>.active:hover>a, #side-nav .nav .nav>.active:focus>a {
+  font-weight: 500;
+  padding-left: 28px;
+}
+ 
+#side-nav .nav>li>a {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #25aae1;
+  padding: 4px 20px;
+}
+#side-nav .nav .nav {
+  display: none;
+  padding-bottom: 10px;
+}
+#side-nav .nav>.active>.nav {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: inherit;
+}
+
+.howto-hierarchy {
+  list-style: none;
+}
+
+.children > li > a:hover,
+.children > li > a:focus {
+  text-decoration: none;
+  color :#eb008b;
+}
+
+a code {
+  text-decoration: underline;
+}
+
+.noshow {
+  display: none;
+}
+
+.navbar-default {
+  background-color: #fff;
+  border-color: #e7e7e7;
+  box-shadow: 0px 1px 9px #ccc;
+}
+
+.ds {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffaf65;
+}
+
+.jumbotron {
+    margin-top: -20px;
+    box-shadow: 1px 1px 3px #aaa;
+    background: url("/wp-content/images/mod-concept-1280.png") center center no-repeat #f7f3f0;
+    min-height: 50em;
+    background-size: cover;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.jumbotron ul {
+  font-size: 1.5em;
+  list-style-type: none;
+  padding-left: 20px;
+  line-height: 28px;
+}
+
+@media (max-width: 767px) {
+  .jumbotron {
+    margin-top: -20px;
+    box-shadow: 1px 1px 3px #aaa;
+    background: url("/wp-content/images/mod-concept-34-slim2.png") center center no-repeat, linear-gradient(0deg, #e4e3df, #f7f3f0);
+    background-size: cover;
+    minimum-height: 50em;
+  }
+
+  .jumbotron ul {
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  .jumbotron p {
+    background-color: rgba(255,255,255,0.5);
+  }
+}
+
+@media (max-width: 585px) {
+  .jumbotron {
+    background: url("/wp-content/images/mod-concept-34-slim2.png") center center no-repeat, linear-gradient(30deg, #e5e4e0, #f7f3f0 66%);
+    background-size:contain;
+  }
+  .jumbotron ul {
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  .jumbotron p {
+    background-color: rgba(255,255,255,0.5);
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Open Sans";
+}
+
+.navbar-nav {
+  font-size: 16px;
+}
+
+.jumbotron .btn {
+  background-color: #ed2790;
+  border-color: #cf1b7a;
+}
+
+.jumbotron .btn:active, .jumbotron .btn:hover {
+  background-color: #cd1f7b;
+  border-color: #cd1f7b;
+}
